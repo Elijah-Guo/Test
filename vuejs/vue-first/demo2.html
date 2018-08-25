@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <form @submit.prevent action="http://localhost:63342" method="get">
+        <input type="submit" value="提交表单">
+    </form>
+
+</div>
+
+</body>
+<script>
+    new Vue({
+       el: "#app"
+    });
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <!--<div id="app" v-on:mousemove="onMouseMove($event)">-->
+    <div id="app" @mousemove="onMouseMove($event)" @contextmenu="onContextmenu($event)">
+        <span>{{message}}</span>
+        <span>{{50 + 100}}</span>
+        <span>{{num + 100}}</span>
+        <span>{{1>2?'aaaa':'bbbb'}}</span>
+        <!--<span>{{if(1>2)'aaa' else 'bbbb' }}</span>-->
+        <br>
+        <button @click="onclick()">click me</button>
+        <br>
+        <span>x:{{x}}</span><br>
+        <span>y:{{y}}</span>
+        <br>
+        <input type="text" v-on:keydown="onKeyDown($event)"><br>
+        <input type="text" @keydown.enter="onEnterKeyDown($event)">
+    </div>
+</body>
+<script>
+    new Vue({
+        //element
+        el:"#app",
+        data:{
+            message:"hello vue",
+            num:100,
+            x:0,
+            y:0
+        },
+        methods:{
+            onclick:function () {
+                //alert("hello vue");
+                this.message = "111111111111111111111111";
+            },
+            onMouseMove:function (event) {
+                this.x = event.x;
+                this.y = event.y;
+            },
+            onKeyDown:function (event) {
+                //判断按下的是否是回车键
+                console.log(event.keyCode);
+                if (event.keyCode == 13) {
+                    alert("您按下了回车键");
+                }
+            },
+            onEnterKeyDown:function (event) {
+                console.log(event.keyCode);
+                alert("你也按下了回车键");
+            },
+            onContextmenu:function (event) {
+                console.log("222222222222222222222");
+                event.preventDefault();
+            }
+        }
+    });
+
+</script>
+</html>

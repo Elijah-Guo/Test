@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-text="content"></div>
+    <div v-html="content"></div>
+    <br>
+    <input type="text" v-bind:value="text">
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            content:'<h1>hello vue</h1>',
+            text:"aaaaaaaaaaaaaa"
+        }
+    })
+</script>
+</body>
+</html>

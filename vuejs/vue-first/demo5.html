@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(elem,index) in array1">{{index}}-{{elem}}</li>
+    </ul>
+    <table border="1">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+        </tr>
+        <tr v-for="stu in studentList">
+            <td>{{stu.id}}</td>
+            <td>{{stu.name}}</td>
+            <td>{{stu.sex}}</td>
+        </tr>
+    </table>
+    <ul>
+        <li v-for="stu in studentList">
+            <span v-for="(value,key) in stu">{{key}}-{{value}}&nbsp;</span>
+        </li>
+    </ul>
+    <div v-if="flag">111111111111111111</div>
+    <div v-show="flag">111111111111111111</div>
+    <button @click="onClick()">点击切换</button>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            array1:[5,2,3,4,5,6,7],
+            studentList:[
+                {id:"1",name:"小明1", sex:"男"},
+                {id:"2",name:"小明2", sex:"男"},
+                {id:"3",name:"小明3", sex:"男"},
+                {id:"4",name:"小明4", sex:"男"},
+                {id:"5",name:"小明5", sex:"男"},
+                {id:"6",name:"小明6", sex:"男"}
+
+            ],
+            flag:true
+        },
+        methods:{
+            onClick:function () {
+                this.flag = !this.flag;
+            }
+        }
+    })
+</script>
+</body>
+</html>

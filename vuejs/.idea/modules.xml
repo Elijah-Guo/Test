@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/vue-first/vue-first.iml" filepath="$PROJECT_DIR$/vue-first/vue-first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vueajax/vueajax.iml" filepath="$PROJECT_DIR$/vueajax/vueajax.iml" />
+    </modules>
+  </component>
+</project>

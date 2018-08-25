@@ -1,0 +1,5 @@
+com\itheima\vue\controller\UserController.class
+com\itheima\vue\dao\UserDao.class
+com\itheima\vue\service\impl\UserServiceImpl.class
+com\itheima\vue\service\UserService.class
+com\itheima\vue\pojo\User.class
