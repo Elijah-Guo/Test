@@ -1,0 +1,30 @@
+
+spring:
+ datasource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/springboot?useUnicode=true&characterEncoding=utf8
+  username: root
+  password: root
+
+
+ jpa:
+  database: MySQL
+  show-sql: true
+  generate-ddl: true
+  hibernate.ddl-auto: update
+
+
+ redis:
+  host: 192.168.200.128
+  port: 6379
+ data:
+   elasticsearch:
+     cluster-name: my-elasticsearch
+     cluster-nodes: 127.0.0.1:9301,127.0.0.1:9302,127.0.0.1:9303
+
+
+
+person:
+  age: 18
+  address: 北京
+  job: 架构师
