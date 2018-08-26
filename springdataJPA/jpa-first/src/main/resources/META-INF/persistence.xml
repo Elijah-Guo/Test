@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <!-- name:jpa单元的名称，可以有多个
+        transaction-type:事务模式
+            RESOURCE_LOCAL：本地事务，一般情况下使用。
+            JTA：分布式事务，跨数据库的事务。
+     -->
+    <persistence-unit name="jpa318" transaction-type="RESOURCE_LOCAL">
+        <!-- jpa实现的提供者，在此使用Hibernate的provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <!-- 配置数据库的连接 -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa318"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="root"/>
+            <!--配置提供者的属性-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <!--是否自动创建数据表
+                value：三个选项：
+                    create：每次执行都自动创建。如果表存在删除之后再创建
+                    update：表不存在创建，存在就不再创建
+                    none：不创建
+            -->
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+        </properties>
+    </persistence-unit>
+</persistence>
