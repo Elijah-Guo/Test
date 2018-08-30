@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="crawler-51job" />
+        <module name="crawler-first" />
+        <module name="crawler-jd" />
+        <module name="crawler-webmagic" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="crawler-51job" target="1.8" />
+      <module name="crawler-first" target="1.8" />
+      <module name="crawler-jd" target="1.8" />
+      <module name="crawler-webmagic" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
